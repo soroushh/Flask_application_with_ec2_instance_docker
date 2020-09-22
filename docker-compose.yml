@@ -3,9 +3,11 @@ version: '3'
 services:
   flaskapp:
     build: .
-    ports:
-      - "8000:8000"
-    network_mode: bridge
+    container_name:
+      flaskapp
+#    ports:
+##      - "8000:8000"
+#    network_mode: bridge
 
   nginx:
     build: ./nginx
@@ -13,5 +15,11 @@ services:
     environment:
       - SERVER_NAME=54.170.128.248
     restart: always
-    network_mode: host
+    ports:
+      - "80:80"
+#    network_mode: host
 
+networks:
+  default:
+    driver:
+      bridge
