@@ -1,1 +1,6 @@
 flask==1.1.1
+flask_sqlalchemy
+datetime
+flask_wtf
+flask_bcrypt
+flask_login
