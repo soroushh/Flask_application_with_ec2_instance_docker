@@ -5,7 +5,7 @@ MAINTAINER sorush.kh68@gmail.com
 RUN apt-get update -y
 RUN apt-get install python3-pip -y
 RUN apt-get install gunicorn3 -y
-#RUN apt-get install python-psycopg2
+RUN apt-get install python-psycopg2 -y
 
 COPY requirements.txt requirements.txt
 RUN mkdir /app
