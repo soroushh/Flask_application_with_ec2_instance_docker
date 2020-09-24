@@ -2,6 +2,7 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route('/')
+@app.route('/ping')
 def start():
-    return 'Welcome back to Soroush"s application.'
+    return 'This is the health endpoint.'
