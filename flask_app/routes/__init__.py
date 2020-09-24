@@ -10,6 +10,15 @@ def people():
     db.session.commit()
     return 'Person created completely.'
 
+
+@app.route('/create/<name>/<family>/<int:age>')
+def create_person(name, family, age):
+    new_person = Person(name=name, family=family, age=age)
+    db.session.add(new_person)
+    db.session.commit()
+    return 'Person created successfully.'
+
+
 @app.route('/all_people')
 def all_people():
     all_people = Person.query.all()
