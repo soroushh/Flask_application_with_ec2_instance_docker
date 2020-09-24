@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from flask import render_template
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'soroush'
@@ -10,3 +11,7 @@ db = SQLAlchemy(app=app)
 @app.route('/ping')
 def start():
     return 'This is the health endpoint.'
+
+@app.route('/home')
+def home():
+    return render_template("home.html")
