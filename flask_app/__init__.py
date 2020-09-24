@@ -4,7 +4,7 @@ from flask import render_template
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'soroush'
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///site.db"
+app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://soroush:kati8212579@soroush-database.cvgmzutcx9w8.eu-west-1.rds.amazonaws.com/soroush-database"
 db = SQLAlchemy(app=app)
 
 @app.route('/')
