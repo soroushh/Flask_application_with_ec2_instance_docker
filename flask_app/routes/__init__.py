@@ -3,7 +3,7 @@ from flask_app import app
 from flask_app.forms import RegistrationForm, LoginForm
 
 
-@app.route('/register')
+@app.route('/register', methods=['GET', 'POST'])
 def sign_up():
     form = RegistrationForm()
 
