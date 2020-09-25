@@ -21,4 +21,11 @@ def sign_up():
 def log_in():
     form = LoginForm()
 
+    if form.validate_on_submit():
+        flash(
+            message=f'Account created for {form.email.data}.',
+            category='success'
+        )
+        return redirect(url_for('home'))
+
     return render_template('login.html', titile='Log in', form=form)
