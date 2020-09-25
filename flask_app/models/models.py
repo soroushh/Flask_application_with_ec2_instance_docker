@@ -1,4 +1,4 @@
-from flask_app import db
+from flask_app import db, bcrypt
 
 class User(db.Model):
     user_id = db.Column(db.Integer, primary_key=True)
@@ -9,6 +9,15 @@ class User(db.Model):
 
     def __repr__(self):
         return f'User({self.username}'
+
+    @classmethod
+    def create_user(cls, username, email, password):
+        hashed_password = bcrypt.generate_password_hash(
+            password=password
+        ).decode('utf-8')
+        user = cls(username=username, password=hashed_password, email=email)
+        db.session.add(user)
+        db.session.commit()
 
 
 

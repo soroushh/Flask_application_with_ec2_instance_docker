@@ -1,6 +1,7 @@
 from flask import render_template, flash, redirect, url_for
 from flask_app import app
 from flask_app.forms import RegistrationForm, LoginForm
+from flask_app.models.models import User
 
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -8,11 +9,16 @@ def sign_up():
     form = RegistrationForm()
 
     if form.validate_on_submit():
+        User.create_user(
+            username=form.username.data,
+            password=form.password.data,
+            email=form.email.data
+        )
         flash(
-            message=f'Account created for {form.username.data}.',
+            message='Your account created, you are able to login.',
             category='success'
         )
-        return redirect(url_for('home'))
+        return redirect(url_for('log_in'))
 
     return render_template('register.html', titile='register', form=form)
 

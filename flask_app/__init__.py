@@ -1,6 +1,7 @@
 from flask import Flask, url_for
 from flask_sqlalchemy import SQLAlchemy
 from flask import render_template
+from flask_bcrypt import Bcrypt
 
 from .forms import LoginForm, RegistrationForm
 
@@ -8,6 +9,8 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'soroush'
 app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://soroush:kati8212579@soroush-database.cvgmzutcx9w8.eu-west-1.rds.amazonaws.com/postgres"
 db = SQLAlchemy(app=app)
+bcrypt = Bcrypt(app=app)
+
 
 @app.route('/')
 @app.route('/ping')
