@@ -2,6 +2,7 @@ from flask import Flask, url_for
 from flask_sqlalchemy import SQLAlchemy
 from flask import render_template
 from flask_bcrypt import Bcrypt
+from flask_login import LoginManager
 
 from .forms import LoginForm, RegistrationForm
 
@@ -10,6 +11,7 @@ app.config['SECRET_KEY'] = 'soroush'
 app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://soroush:kati8212579@soroush-database.cvgmzutcx9w8.eu-west-1.rds.amazonaws.com/postgres"
 db = SQLAlchemy(app=app)
 bcrypt = Bcrypt(app=app)
+login_manager = LoginManager(app=app)
 
 
 @app.route('/')
