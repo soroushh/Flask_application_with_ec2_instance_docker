@@ -73,3 +73,14 @@ def logout():
 def account():
     """."""
     return render_template('account.html', titile='Account')
+
+@app.route('/ping')
+@app.route('/about')
+def about():
+    return render_template('about.html', title='about')
+
+@app.route('/home')
+@app.route('/')
+@login_required
+def home():
+    return render_template("home.html", title='Home')
