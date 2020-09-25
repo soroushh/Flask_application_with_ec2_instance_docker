@@ -9,9 +9,7 @@ def sign_up():
 
     if form.validate_on_submit():
         flash(
-            message='Account created for {username}.'.format(
-                form.username.data
-            ),
+            message=f'Account created for {form.username.data}.',
             category='success'
         )
         return redirect(url_for('home'))
