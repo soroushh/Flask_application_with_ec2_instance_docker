@@ -2,11 +2,13 @@ from flask import render_template, flash, redirect, url_for
 from flask_app import app
 from flask_app.forms import RegistrationForm, LoginForm
 from flask_app.models.models import User
-from flask_login import login_user
+from flask_login import login_user, current_user
 
 
 @app.route('/register', methods=['GET', 'POST'])
 def sign_up():
+    if current_user.is_authenticated():
+        return redirect(url_for('home'))
     form = RegistrationForm()
 
     if form.validate_on_submit():
@@ -33,6 +35,9 @@ def sign_up():
 
 @app.route('/login',methods=['GET', 'POST'])
 def log_in():
+    if current_user.is_authenticated():
+        return redirect(url_for('home'))
+
     form = LoginForm()
 
     if form.validate_on_submit():
