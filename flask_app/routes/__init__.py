@@ -25,7 +25,7 @@ def sign_up():
             )
             return redirect(url_for('log_in'))
         except Exception:
-            flash(message=str(Exception.value), category='danger')
+            flash(message=str(Exception), category='danger')
 
     return render_template('register.html', titile='register', form=form)
 
