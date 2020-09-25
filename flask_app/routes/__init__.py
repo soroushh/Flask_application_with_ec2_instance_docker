@@ -2,7 +2,7 @@ from flask import render_template, flash, redirect, url_for
 from flask_app import app
 from flask_app.forms import RegistrationForm, LoginForm
 from flask_app.models.models import User
-from flask_login import login_user, current_user
+from flask_login import login_user, current_user, logout_user
 
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -56,3 +56,11 @@ def log_in():
             )
 
     return render_template('login.html', titile='Log in', form=form)
+
+
+@app.route('/logout')
+def logout():
+    """."""
+    logout_user()
+    return redirect(url_for('home'))
+
