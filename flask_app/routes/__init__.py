@@ -7,7 +7,7 @@ from flask_login import login_user, current_user
 
 @app.route('/register', methods=['GET', 'POST'])
 def sign_up():
-    if current_user.is_authenticated():
+    if current_user.is_authenticated:
         return redirect(url_for('home'))
     form = RegistrationForm()
 
@@ -35,7 +35,7 @@ def sign_up():
 
 @app.route('/login',methods=['GET', 'POST'])
 def log_in():
-    if current_user.is_authenticated():
+    if current_user.is_authenticated:
         return redirect(url_for('home'))
 
     form = LoginForm()
