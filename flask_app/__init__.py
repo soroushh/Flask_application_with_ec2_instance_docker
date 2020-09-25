@@ -12,6 +12,6 @@ db = SQLAlchemy(app=app)
 def start():
     return 'This is the health endpoint.'
 
-@app.route('/home')
+@app.route('/home', title='Home')
 def home():
     return render_template("home.html")
