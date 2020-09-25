@@ -19,5 +19,19 @@ class User(db.Model):
         db.session.add(user)
         db.session.commit()
 
+    @classmethod
+    def check_repetitive_credentials(cls, username, email):
+        repetitive_username = cls.query.filter_by(username=username).first()
+        repetitive_email = cls.query.filter_by(email=email).first()
+
+        if repetitive_username:
+            raise Exception(
+                'Username already taken. Please choose another one.'
+            )
+        if repetitive_email:
+            raise Exception(
+                'Email already taken. Please another email.')
+
+
 
 

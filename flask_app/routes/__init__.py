@@ -9,16 +9,23 @@ def sign_up():
     form = RegistrationForm()
 
     if form.validate_on_submit():
-        User.create_user(
-            username=form.username.data,
-            password=form.password.data,
-            email=form.email.data
-        )
-        flash(
-            message='Your account created, you are able to login.',
-            category='success'
-        )
-        return redirect(url_for('log_in'))
+        try:
+            User.check_repetitive_credentials(
+                username=form.username.data,
+                email=form.email.data
+            )
+            User.create_user(
+                username=form.username.data,
+                password=form.password.data,
+                email=form.email.data
+            )
+            flash(
+                message='Your account created, you are able to login.',
+                category='success'
+            )
+            return redirect(url_for('log_in'))
+        except Exception:
+            flash(message=str(Exception.value), category='danger')
 
     return render_template('register.html', titile='register', form=form)
 
