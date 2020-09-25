@@ -41,7 +41,7 @@ class User(db.Model, UserMixin):
 
     @classmethod
     def get_by_credentials(cls, email, password):
-        user = cls.query.filter_by(email=email)
+        user = cls.query.filter_by(email=email).first()
 
         if user and bcrypt.check_password_hash(user.password, password):
             return user
