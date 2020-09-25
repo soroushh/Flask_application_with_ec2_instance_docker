@@ -13,6 +13,9 @@ db = SQLAlchemy(app=app)
 bcrypt = Bcrypt(app=app)
 login_manager = LoginManager(app=app)
 
+# This is the login function name.
+login_manager.login_view = 'log_in'
+
 
 @app.route('/')
 @app.route('/ping')
