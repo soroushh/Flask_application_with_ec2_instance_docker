@@ -23,7 +23,7 @@ def log_in():
 
     if form.validate_on_submit():
         flash(
-            message=f'Account created for {form.email.data}.',
+            message='Logged in successfully.',
             category='success'
         )
         return redirect(url_for('home'))
