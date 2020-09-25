@@ -1,15 +1,14 @@
 from flask_app import db
 
-class Person(db.Model):
-    """The definition of person class"""
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(100), nullable=False)
-    family = db.Column(db.String(100), nullable=False)
-    age = db.Column(db.Integer, nullable=False)
+class User(db.Model):
+    user_id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(20), unique=True, nullable=False)
+    email = db.Column(db.String(120), unique=True, nullable=False)
+    image_file = db.Column(db.String(20), nullable=False, default='default.jpg')
+    password = db.Column(db.String(60), nullable=False)
 
-class Movement(db.Model):
-    """The definition of movement class."""
-    movement_id = db.Column(db.Integer, primary_key=True)
-    person_id = db.Column(db.Integer, db.ForeignKey('person.id'), nullable=False)
-    name = db.Column(db.String, nullable=False)
-    repetition = db.Column(db.Integer, nullable=False)
+    def __repr__(self):
+        return f'User({self.username}'
+
+
+
