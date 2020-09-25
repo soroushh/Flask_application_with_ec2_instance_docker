@@ -17,6 +17,9 @@ class User(db.Model, UserMixin):
     def __repr__(self):
         return f'User({self.username}'
 
+    def get_id(self):
+        return self.user_id
+
     @classmethod
     def create_user(cls, username, email, password):
         hashed_password = bcrypt.generate_password_hash(

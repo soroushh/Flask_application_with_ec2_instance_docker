@@ -69,7 +69,7 @@
             <entry file="file://$PROJECT_DIR$/flask_app/models/models.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="396">
-                  <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+                  <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
                 </state>
               </provider>
             </entry>
@@ -120,8 +120,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/flask_app/models/models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="774">
-                  <caret line="43" column="55" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
+                <state relative-caret-position="360">
+                  <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
                   <folding>
                     <element signature="e#0#47#0" expanded="true" />
                   </folding>
@@ -264,7 +264,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27333000" />
+    <option name="totallyTimeSpent" value="27436000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-478" y="-1440" width="2560" height="1440" extended-state="0" />
@@ -427,8 +427,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/flask_app/models/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="774">
-          <caret line="43" column="55" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
+        <state relative-caret-position="360">
+          <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
           <folding>
             <element signature="e#0#47#0" expanded="true" />
           </folding>
