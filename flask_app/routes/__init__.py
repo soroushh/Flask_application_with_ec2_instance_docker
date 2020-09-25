@@ -44,11 +44,10 @@ def log_in():
             )
             login_user(user=user, remember=form.remember.data)
             return redirect(url_for('home'))
-
-        flash(
-            message='Login unsuccessful, please check email and password.',
-            category='danger'
-        )
-        return redirect(url_for('home'))
+        else:
+            flash(
+                message='Login unsuccessful, please check email and password.',
+                category='danger'
+            )
 
     return render_template('login.html', titile='Log in', form=form)
