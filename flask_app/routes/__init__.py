@@ -72,5 +72,4 @@ def logout():
 @login_required
 def account():
     """."""
-    logout_user()
     return render_template('account.html', titile='Account')
