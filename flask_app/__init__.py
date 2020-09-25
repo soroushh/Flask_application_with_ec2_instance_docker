@@ -15,6 +15,7 @@ login_manager = LoginManager(app=app)
 
 # This is the login function name.
 login_manager.login_view = 'log_in'
+login_manager.login_message_category = 'info'
 
 
 @app.route('/')

@@ -1,4 +1,4 @@
-from flask import render_template, flash, redirect, url_for
+from flask import render_template, flash, redirect, url_for, request
 from flask_app import app
 from flask_app.forms import RegistrationForm, LoginForm
 from flask_app.models.models import User
@@ -48,6 +48,9 @@ def log_in():
                 email=form.email.data, password=form.password.data
             )
             login_user(user=user, remember=form.remember.data)
+
+            if request.args.get('next'):
+                return redirect(request.args.get('next'))
             return redirect(url_for('home'))
         else:
             flash(
