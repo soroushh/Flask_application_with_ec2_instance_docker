@@ -17,7 +17,7 @@ def sign_up():
     return render_template('register.html', titile='register', form=form)
 
 
-@app.route('/login')
+@app.route('/login',methods=['GET', 'POST'])
 def log_in():
     form = LoginForm()
 
