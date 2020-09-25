@@ -13,7 +13,7 @@ db = SQLAlchemy(app=app)
 @app.route('/ping')
 @app.route('/about')
 def about():
-    return 'This is the health endpoint.'
+    return render_template('about.html', title='about')
 
 @app.route('/home')
 def home():
