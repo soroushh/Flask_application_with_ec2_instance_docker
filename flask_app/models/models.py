@@ -60,6 +60,10 @@ class MovementSet(db.Model):
         nullable=False
     )
 
+    @classmethod
+    def find_by_user_id(cls, user_id):
+        return cls.query.filter_by(user_id=user_id).all()
+
 
 
 

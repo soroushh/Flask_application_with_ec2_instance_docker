@@ -1,0 +1,6 @@
+{% extends "layout.html" %}
+{% block content %}
+    {% for set in sets %}
+        {{ set.set_name }}
+    {% endfor %}
+{% endblock content %}

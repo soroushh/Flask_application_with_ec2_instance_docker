@@ -1,7 +1,7 @@
 from flask import render_template, flash, redirect, url_for, request
 from flask_app import app
 from flask_app.forms import RegistrationForm, LoginForm
-from flask_app.models.models import User
+from flask_app.models.models import User, MovementSet
 from flask_login import login_user, current_user, logout_user, login_required
 
 
@@ -84,3 +84,16 @@ def about():
 @login_required
 def home():
     return render_template("home.html", title='Home')
+
+
+@app.route('/sets')
+@login_required
+def sets():
+    """Shows the movement sets to the user."""
+    user_id = current_user.user_id
+
+    sets = MovementSet.find_by_user_id(user_id=user_id)
+
+    return render_template('sets.html', sets=sets)
+
+
