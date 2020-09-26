@@ -6,6 +6,9 @@
                 <li class="list-group-item">{{ set.set_name }}</li>
             {% endfor %}
         </ul>
-    </div>
 
+        <form method="get" action="/sets">
+            <button class="btn btn-primary" type="submit">Create a New Set</button>
+        </form>
+    </div>
 {% endblock content %}

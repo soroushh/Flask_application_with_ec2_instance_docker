@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41779062-a5b6-4128-ba3b-7b758430bf15" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/flask_app/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/templates/sets.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/templates/sets.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,7 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.78088963">
+    <splitter split-orientation="horizontal" split-proportion="0.89713156">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -35,11 +35,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/flask_app/templates/home.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="72">
-                  <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+                <state relative-caret-position="54">
+                  <caret line="3" column="4" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="5" selection-end-column="11" />
                 </state>
               </provider>
             </entry>
@@ -86,11 +86,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/flask_app/templates/sets.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+                <state relative-caret-position="162">
+                  <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="40" />
                 </state>
               </provider>
             </entry>
@@ -177,8 +177,8 @@
         <option value="$PROJECT_DIR$/flask_app/templates/layout.html" />
         <option value="$PROJECT_DIR$/flask_app/models/models.py" />
         <option value="$PROJECT_DIR$/flask_app/routes/__init__.py" />
-        <option value="$PROJECT_DIR$/flask_app/templates/sets.html" />
         <option value="$PROJECT_DIR$/flask_app/templates/home.html" />
+        <option value="$PROJECT_DIR$/flask_app/templates/sets.html" />
       </list>
     </option>
   </component>
@@ -281,13 +281,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31059000" />
+    <option name="totallyTimeSpent" value="31317000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2761087" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2761087" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -301,7 +301,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.37546468" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.37546468" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -452,17 +452,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flask_app/templates/sets.html">
+    <entry file="file://$PROJECT_DIR$/flask_app/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        <state relative-caret-position="54">
+          <caret line="3" column="4" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="5" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flask_app/templates/home.html">
+    <entry file="file://$PROJECT_DIR$/flask_app/templates/sets.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+        <state relative-caret-position="162">
+          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="40" />
         </state>
       </provider>
     </entry>
