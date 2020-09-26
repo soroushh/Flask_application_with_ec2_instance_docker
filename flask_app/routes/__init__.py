@@ -121,5 +121,11 @@ def movements(set_id):
     return render_template('movements.html', movements=movements, set_id=set_id)
 
 
+@app.route('/sets/<int:set_id>/movement')
+def create_movement(set_id):
+    """The view function enabling us to create a movement"""
+    return 'success'
+
+
 
 
