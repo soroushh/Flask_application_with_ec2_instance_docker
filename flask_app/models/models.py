@@ -84,6 +84,7 @@ class Movement(db.Model):
     )
     round = db.Column(db.Integer, nullable=False)
     repetition = db.Column(db.Integer, nullable=False)
+    name = db.Column(db.String, nullable=False)
 
 
     @classmethod
