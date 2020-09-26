@@ -19,16 +19,14 @@
 <table class="table">
   <thead>
     <tr>
-        <th scope="col">#</th>
         <th scope="col">Movement</th>
         <th scope="col">Rounds</th>
         <th scope="col">Repetition Per round</th>
     </tr>
   </thead>
   <tbody>
-  {% for index, movement in enumerate(movements) %}
+  {% for movement in movements %}
     <tr>
-      <th scope="row">{{ index + 1 }}</th>
       <td>{{ movement.name }}</td>
       <td>{{ movement.round }}</td>
       <td>{{ movement.repetition }}</td>
