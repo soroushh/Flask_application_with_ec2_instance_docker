@@ -118,7 +118,7 @@ def movements(set_id):
     """The function shows the movements related to a specific set."""
     movements = Movement.find_for_set(set_id=set_id)
 
-    return render_template('movements.html', movements=movements)
+    return render_template('movements.html', movements=movements, set_id=set_id)
 
 
 
