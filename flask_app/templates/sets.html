@@ -1,6 +1,11 @@
 {% extends "layout.html" %}
 {% block content %}
-    {% for set in sets %}
-        {{ set.set_name }}
-    {% endfor %}
+    <div class="container">
+        <ul class="list-group">
+            {% for set in sets %}
+                <li class="list-group-item">{{ set.set_name }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
 {% endblock content %}
