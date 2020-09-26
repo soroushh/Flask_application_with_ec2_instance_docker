@@ -82,9 +82,8 @@ class Movement(db.Model):
         db.ForeignKey('movement_set.movement_set_id'),
         nullable=False
     )
-    round = db.Column(db.Integer, nullable=False)
-    repetition = db.Column(db.Integer, nullable=False)
     name = db.Column(db.String, nullable=False)
+    repetitions = db.relationship('Repetition', backref = 'movement', lazy=True)
 
 
     @classmethod
@@ -92,6 +91,11 @@ class Movement(db.Model):
         return cls.query.filter_by(set_id=set_id).all()
 
 
+class Repetition(db.Model):
+    """This is a model for simulating movement repetitions."""
+    repetition_id = db.Column(db.Integer, primary_key=True)
+    number = db.Column(db.Integer, nullable=False)
+    movement_id = db.Column(db.Integer, db.ForeignKey('movement.movement_id'))
 
 
 
