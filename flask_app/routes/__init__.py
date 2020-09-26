@@ -1,6 +1,6 @@
 from flask import render_template, flash, redirect, url_for, request
 from flask_app import app
-from flask_app.forms import RegistrationForm, LoginForm, MovementSetForm
+from flask_app.forms import RegistrationForm, LoginForm, MovementSetForm, MovementForm
 from flask_app.models.models import User, MovementSet, Movement
 from flask_login import login_user, current_user, logout_user, login_required
 
@@ -124,7 +124,8 @@ def movements(set_id):
 @app.route('/sets/<int:set_id>/movement')
 def create_movement(set_id):
     """The view function enabling us to create a movement"""
-    return render_template('create_movement.html')
+    form = MovementForm()
+    return render_template('create_movement.html', form=form)
 
 
 
