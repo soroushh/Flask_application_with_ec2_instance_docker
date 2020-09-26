@@ -39,7 +39,7 @@ class MovementSetForm(FlaskForm):
 class MovementForm(FlaskForm):
     """This class helps us to create new movements."""
     movement_name = StringField('Name', validators=[DataRequired()])
-    submit = StringField('Submit')
+    submit = SubmitField('Submit')
 
 
 
