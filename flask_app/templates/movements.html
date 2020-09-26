@@ -5,16 +5,16 @@
         <thead>
         <tr>
             <th scope="col">Movement</th>
-            <th scope="col">Rounds</th>
-            <th scope="col">Repetition Per round</th>
+            <th scope="col">Repetitions</th>
         </tr>
         </thead>
         <tbody>
         {% for movement in movements %}
         <tr>
             <td>{{ movement.name }}</td>
-            <td>{{ movement.round }}</td>
-            <td>{{ movement.repetition }}</td>
+            {% for repetition in movement.repetitions %}
+                <th> {{repetition.number}}</th>
+            {% endfor %}
         </tr>
         {% endfor %}
         </tbody>
