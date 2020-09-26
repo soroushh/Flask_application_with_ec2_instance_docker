@@ -1,12 +1,38 @@
 {% extends "layout.html" %}
 {% block content %}
     <div class="container">
-        <ul class="list-group">
-            {% for movement in movements %}
-                <li class="list-group-item">{{ movement.round }}</li>
-                <li class="list-group-item">{{ movement.repetition }}</li>
-            {% endfor %}
-        </ul>
+        <table class="table">
+
+        </table>
+<!--        <ul class="list-group">-->
+<!--            {% for movement in movements %}-->
+<!--                <li class="list-group-item">{{ movement.round }}</li>-->
+<!--                <li class="list-group-item">{{ movement.repetition }}</li>-->
+<!--            {% endfor %}-->
+<!--        </ul>-->
 
     </div>
 {% endblock content %}
+
+
+
+<table class="table">
+  <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Movement</th>
+        <th scope="col">Rounds</th>
+        <th scope="col">Repetition Per round</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for index, movement in enumerate(movements) %}
+    <tr>
+      <th scope="row">{{ index + 1 }}</th>
+      <td>{{ movement.name }}</td>
+      <td>{{ movement.round }}</td>
+      <td>{{ movement.repetition }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
