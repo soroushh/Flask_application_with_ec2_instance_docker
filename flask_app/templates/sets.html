@@ -3,7 +3,7 @@
     <div class="container">
         <ul class="list-group">
             {% for set in sets %}
-                <li class="list-group-item">{{ set.set_name }}</li>
+                <li class="list-group-item"><a href="{{ url_for('movements', set_id=set.set_id)}}">{{ set.set_name }}</a> </li>
             {% endfor %}
         </ul>
 

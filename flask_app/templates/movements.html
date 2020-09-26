@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="container">
+        <ul class="list-group">
+            {% for movement in movements %}
+                <li class="list-group-item">{{ movement.round }}</li>
+                <li class="list-group-item">{{ movement.repetition }}</li>
+            {% endfor %}
+        </ul>
+
+    </div>
+{% endblock content %}

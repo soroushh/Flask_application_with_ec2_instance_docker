@@ -1,7 +1,7 @@
 from flask import render_template, flash, redirect, url_for, request
 from flask_app import app
 from flask_app.forms import RegistrationForm, LoginForm, MovementSetForm
-from flask_app.models.models import User, MovementSet
+from flask_app.models.models import User, MovementSet, Movement
 from flask_login import login_user, current_user, logout_user, login_required
 
 
@@ -111,6 +111,15 @@ def create_set():
         return redirect(url_for('sets'))
 
     return render_template('create_set.html', form=form)
+
+
+@app.route('/sets/<int:set_id>/movements')
+def movements(set_id):
+    """The function shows the movements related to a specific set."""
+    movements = Movement.find_for_set(set_id=set_id)
+
+    return render_template('movements.html', movements=movements)
+
 
 
 

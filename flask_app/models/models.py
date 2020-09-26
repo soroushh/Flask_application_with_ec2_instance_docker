@@ -86,6 +86,11 @@ class Movement(db.Model):
     repetition = db.Column(db.Integer, nullable=False)
 
 
+    @classmethod
+    def find_for_set(cls, set_id):
+        return cls.query.filter_by(set_id=set_id).all()
+
+
 
 
 
