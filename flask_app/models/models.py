@@ -59,6 +59,7 @@ class MovementSet(db.Model):
         db.ForeignKey('user.user_id'),
         nullable=False
     )
+    movements = db.relationship('Movement', backref='set', lazy=True)
 
 
     @classmethod
@@ -71,6 +72,19 @@ class MovementSet(db.Model):
         set = cls(user_id=user_id, set_name=set_name)
         db.session.add(set)
         db.session.commit()
+
+
+class Movement(db.Model):
+    """A specific movement belongs to a set and has repetition time and number of movement."""
+    movement_id = db.Column(db.Integer, primary_key=True)
+    set_id = db.Column(
+        db.Integer,
+        db.ForeignKey('movement_set.movement_set_id'),
+        nullable=False
+    )
+    round = db.Column(db.Integer, nullable=False)
+    repetition = db.Column(db.Integer, nullable=False)
+
 
 
 
