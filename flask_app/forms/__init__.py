@@ -30,4 +30,10 @@ class LoginForm(FlaskForm):
     submit = SubmitField('Log in')
 
 
+class MovementSetForm(FlaskForm):
+    """This class enables users to create a new MovementSet."""
+    set_name = StringField('Set Name', validators=[DataRequired()])
+    submit = SubmitField('Submit')
+
+
 

@@ -1,6 +1,6 @@
 from flask import render_template, flash, redirect, url_for, request
 from flask_app import app
-from flask_app.forms import RegistrationForm, LoginForm
+from flask_app.forms import RegistrationForm, LoginForm, MovementSetForm
 from flask_app.models.models import User, MovementSet
 from flask_login import login_user, current_user, logout_user, login_required
 
@@ -96,13 +96,21 @@ def sets():
 
     return render_template('sets.html', sets=sets)
 
-@app.route('/sets/add')
+@app.route('/sets/add', methods=['GET', 'POST'])
 @login_required
 def create_set():
     """Creates a set for a specific user."""
-    MovementSet.create_set(user_id=current_user.user_id, set_name='dump_set')
-    flash('Set successfully created.', 'success')
-    return redirect(url_for('sets'))
+    form = MovementSetForm()
+
+    if form.validate_on_submit():
+        MovementSet.create_set(
+            user_id=current_user.user_id,
+            set_name=form.set_name.data
+        )
+        flash('Set successfully created.', 'success')
+        return redirect(url_for('sets'))
+
+    return render_template('create_set.html', form=form)
 
 
 
