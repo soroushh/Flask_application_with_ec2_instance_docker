@@ -13,12 +13,14 @@
         <tr>
             <td>{{ movement.name }}</td>
             {% for repetition in movement.repetitions %}
-                <th> {{repetition.number}}</th>
+                <td> {{repetition.number}}</td>
             {% endfor %}
+            <td>
+                <form method="get" action="#">
+                    <button class="btn btn-primary" type="submit">Add a Repetition</button>
+                </form>
+            </td>
         </tr>
-        <form method="get" action="#">
-            <button class="btn btn-primary" type="submit">Add a Repetition</button>
-        </form>
         {% endfor %}
         </tbody>
     </table>
