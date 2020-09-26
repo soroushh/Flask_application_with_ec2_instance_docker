@@ -96,4 +96,13 @@ def sets():
 
     return render_template('sets.html', sets=sets)
 
+@app.route('/sets/add')
+@login_required
+def create_set():
+    """Creates a set for a specific user."""
+    MovementSet.create_set(user_id=current_user.user_id, set_name='dump_set')
+    flash('Set successfully created.', 'success')
+    return redirect(url_for('sets'))
+
+
 

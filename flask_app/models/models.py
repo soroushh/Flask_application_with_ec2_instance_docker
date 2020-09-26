@@ -60,9 +60,18 @@ class MovementSet(db.Model):
         nullable=False
     )
 
+
     @classmethod
     def find_by_user_id(cls, user_id):
         return cls.query.filter_by(user_id=user_id).all()
+
+
+    @classmethod
+    def create_set(cls, user_id, set_name):
+        set = cls(user_id=user_id, set_name=set_name)
+        db.session.add(set)
+        db.session.commit()
+
 
 
 
