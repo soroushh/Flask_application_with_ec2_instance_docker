@@ -125,6 +125,12 @@ def movements(set_id):
 def create_movement(set_id):
     """The view function enabling us to create a movement"""
     form = MovementForm()
+
+    if form.validate_on_submit():
+        Movement.create_movement(name=form.movement_name.data, set_id=set_id)
+        flash('Movement successfully added', 'success')
+        return redirect(url_for('movements', set_id=set_id))
+
     return render_template('create_movement.html', form=form)
 
 

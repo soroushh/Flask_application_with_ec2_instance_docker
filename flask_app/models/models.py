@@ -90,6 +90,12 @@ class Movement(db.Model):
     def find_for_set(cls, set_id):
         return cls.query.filter_by(set_id=set_id).all()
 
+    @classmethod
+    def create_movement(cls, name, set_id):
+        movement = Movement(name=name, set_id=set_id)
+        db.session.add(movement)
+        db.session.commit()
+
 
 class Repetition(db.Model):
     """This is a model for simulating movement repetitions."""
