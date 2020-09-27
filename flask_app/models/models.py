@@ -104,6 +104,8 @@ class Movement(db.Model):
 
         for repetition in movement.repetitions:
             db.session.delete(repetition)
+        for action in movement.actions:
+            db.session.delete(action)
         db.session.delete(movement)
         db.session.commit()
 
