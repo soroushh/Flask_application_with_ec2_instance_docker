@@ -2,6 +2,7 @@ FROM ubuntu:18.04
 
 MAINTAINER sorush.kh68@gmail.com
 
+ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update -y
 RUN apt-get install python3-pip -y
 RUN apt-get install gunicorn3 -y
