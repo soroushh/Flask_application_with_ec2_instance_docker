@@ -1,5 +1,6 @@
 from flask_app import db, bcrypt, login_manager
 from flask_login import UserMixin
+from datetime import date
 
 
 @login_manager.user_loader
@@ -126,6 +127,17 @@ class MovementAction(db.Model):
     repetition = db.Column(db.Integer, nullable=False)
     weight = db.Column(db.Integer, nullable=False)
     date = db.Column(db.Date, nullable=False)
+
+
+    @classmethod
+    def create_action(cls, movement_id, repetition, weight):
+        """Creates an action."""
+        db.session.add(
+            cls(
+                movement_id=movement_id,
+                repetition=repetition,
+                weight=weight
+            ))
 
 
 

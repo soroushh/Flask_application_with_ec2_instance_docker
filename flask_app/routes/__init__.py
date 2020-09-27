@@ -156,6 +156,12 @@ def delete_movement(set_id, movement_id):
     return redirect(url_for('movements', set_id=set_id))
 
 
+@app.route('/movement/<int:movement_id>/action/create')
+def create_action(movement_id):
+    return f'{movement_id}'
+
+
+
 
 
 
