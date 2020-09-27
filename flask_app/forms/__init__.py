@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField, BooleanField
+from wtforms import StringField, PasswordField, SubmitField, BooleanField, IntegerField
 from wtforms.validators import DataRequired, Length, Email, EqualTo
 
 MIN_USERNAME_LENGTH = 2
@@ -44,7 +44,7 @@ class MovementForm(FlaskForm):
 
 class RepetitionForm(FlaskForm):
     """This class helps you to define the movement's repetition."""
-    number = SubmitField('Number of repetion', validators=[DataRequired()])
+    number = IntegerField('Number of repetion', validators=[DataRequired()])
     submit = SubmitField('Submit')
 
 
