@@ -149,6 +149,14 @@ def create_repetition(set_id, movement_id):
     return render_template('create_repetition.html', form=form)
 
 
+@app.route('/sets/<int:set_id>/movement/<int:movement_id>/remove')
+def delete_movement(set_id, movement_id):
+    Movement.delete_movement(movement_id=movement_id)
+    flash('Movement successfully deleted', 'success')
+    return redirect(url_for('movements', set_id=set_id))
+
+
+
 
 
 

@@ -85,7 +85,6 @@ class Movement(db.Model):
     name = db.Column(db.String, nullable=False)
     repetitions = db.relationship('Repetition', backref = 'movement', lazy=True)
 
-
     @classmethod
     def find_for_set(cls, set_id):
         return cls.query.filter_by(set_id=set_id).all()
@@ -94,6 +93,16 @@ class Movement(db.Model):
     def create_movement(cls, name, set_id):
         movement = Movement(name=name, set_id=set_id)
         db.session.add(movement)
+        db.session.commit()
+
+    @classmethod
+    def delete_movement(cls, movement_id):
+        """."""
+        movement = cls.query.filter_by(movement_id=movement_id).first()
+
+        for repetition in movement.repetitions:
+            db.session.delete(repetition)
+        db.session.delete(movement)
         db.session.commit()
 
 
