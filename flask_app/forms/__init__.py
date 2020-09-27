@@ -42,4 +42,10 @@ class MovementForm(FlaskForm):
     submit = SubmitField('Submit')
 
 
+class RepetitionForm(FlaskForm):
+    """This class helps you to define the movement's repetition."""
+    number = SubmitField('Number of repetion', validators=[DataRequired()])
+    submit = SubmitField('Submit')
+
+
 
