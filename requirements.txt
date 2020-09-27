@@ -6,3 +6,4 @@ flask_bcrypt
 flask_login
 psycopg2-binary
 email_validator
+alembic
