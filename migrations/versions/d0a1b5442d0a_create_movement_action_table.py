@@ -34,5 +34,5 @@ def upgrade():
 
 
 def downgrade():
-    op.drop_constraint('fk_movement_action', 'movement-action', type_='foreignkey')
+    op.drop_constraint('fk_movement_action', 'movement_action', type_='foreignkey')
     op.drop_table('movement_action')
