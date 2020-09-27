@@ -27,6 +27,9 @@
                 <form method="get" action="{{ url_for('create_action', movement_id=movement.movement_id, set_id=set_id)}}">
                     <button class="btn btn-primary btn-xs" type="submit">Add Action</button>
                 </form>
+                <form method="get" action="{{ url_for('get_actions', movement_id=movement.movement_id, set_id=set_id)}}">
+                    <button class="btn btn-primary btn-xs" type="submit">See History</button>
+                </form>
             </td>
         </tr>
         {% endfor %}
