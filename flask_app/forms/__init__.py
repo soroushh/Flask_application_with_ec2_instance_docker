@@ -48,4 +48,11 @@ class RepetitionForm(FlaskForm):
     submit = SubmitField('Submit')
 
 
+class MovementActionFrom(FlaskForm):
+    """The class to create actions related to the movements."""
+    repetition = IntegerField('Number of Repetitions', validators=[DataRequired()])
+    weight = IntegerField('Weight', validators=[DataRequired()])
+    submit = SubmitField('Submit')
+
+
 
