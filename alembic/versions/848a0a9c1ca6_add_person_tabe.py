@@ -17,11 +17,8 @@ depends_on = None
 
 
 def upgrade():
-    op.create_table('account',
-                    sa.Column('id', sa.INTEGER, primary_key=True),
-                    sa.Column('timestamp', sa.TIMESTAMP, server_default=sa.func.now())
-                    )
+    pass
 
 
 def downgrade():
-    op.drop_table('account')
+    pass
