@@ -6,6 +6,7 @@ RUN apt-get update -y
 RUN apt-get install python3-pip -y
 RUN apt-get install gunicorn3 -y
 RUN apt-get install python-psycopg2 -y
+RUN apt-get install -y python-alembic
 
 COPY requirements.txt requirements.txt
 RUN mkdir /app
