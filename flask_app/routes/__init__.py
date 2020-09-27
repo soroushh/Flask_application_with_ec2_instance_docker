@@ -134,7 +134,7 @@ def create_movement(set_id):
     return render_template('create_movement.html', form=form)
 
 
-@app.route('sets/<int:set_id>/movement/<int:movement_id>/repetition', methods=['GET', 'POST'])
+@app.route('/sets/<int:set_id>/movement/<int:movement_id>/repetition', methods=['GET', 'POST'])
 def create_repetition(set_id, movement_id):
     form = RepetitionForm()
 
