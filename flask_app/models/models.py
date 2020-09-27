@@ -84,6 +84,7 @@ class Movement(db.Model):
     )
     name = db.Column(db.String, nullable=False)
     repetitions = db.relationship('Repetition', backref = 'movement', lazy=True)
+    actions = db.relationship('MovementAction', backref = 'movement', lazy=True)
 
     @classmethod
     def find_for_set(cls, set_id):
@@ -116,6 +117,15 @@ class Repetition(db.Model):
     def create_repetition(cls, number, movement_id):
         db.session.add(cls(number=number, movement_id=movement_id))
         db.session.commit()
+
+
+class MovementAction(db.Model):
+    """The movements which have been implemented by a body builder."""
+    movement_action_id = db.Column(db.Integer, primary_key=True)
+    movement_id = db.Column(db.Integer, db.ForeignKey('movement.movement_id'))
+    repetition = db.Column(db.Integer, nullable=False)
+    weight = db.Column(db.Integer, nullable=False)
+    date = db.Column(db.Date, nullable=False)
 
 
 
