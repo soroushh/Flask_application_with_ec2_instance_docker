@@ -1,7 +1,7 @@
 from flask import render_template, flash, redirect, url_for, request
 from flask_app import app
-from flask_app.forms import RegistrationForm, LoginForm, MovementSetForm, MovementForm
-from flask_app.models.models import User, MovementSet, Movement
+from flask_app.forms import RegistrationForm, LoginForm, MovementSetForm, MovementForm, RepetitionForm
+from flask_app.models.models import User, MovementSet, Movement, Repetition
 from flask_login import login_user, current_user, logout_user, login_required
 
 
@@ -132,6 +132,24 @@ def create_movement(set_id):
         return redirect(url_for('movements', set_id=set_id))
 
     return render_template('create_movement.html', form=form)
+
+
+@app.route('sets/<int:set_id>/movement/<int:movement_id>/repetition', methods=['GET', 'POST'])
+def create_repetition(set_id, movement_id):
+    form = RepetitionForm()
+
+    if form.validate_on_submit():
+        Repetition.create_repetition(
+            number=form.number.data,
+            movement_id=movement_id
+        )
+        flash('Repetition successfully added', 'success')
+        return redirect(url_for('movements', set_id=set_id))
+
+    return render_template('create_repetition.html', form=form)
+
+
+
 
 
 

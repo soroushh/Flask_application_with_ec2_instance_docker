@@ -103,6 +103,12 @@ class Repetition(db.Model):
     number = db.Column(db.Integer, nullable=False)
     movement_id = db.Column(db.Integer, db.ForeignKey('movement.movement_id'))
 
+    @classmethod
+    def create_repetition(cls, number, movement_id):
+        db.session.add(cls(number=number, movement_id=movement_id))
+        db.session.commit()
+
+
 
 
 
