@@ -143,6 +143,11 @@ class MovementAction(db.Model):
         db.session.commit()
 
 
+    @classmethod
+    def get_by_movement(cls, movement_id):
+        """Returns all the actions for a specific movement."""
+        return cls.query.filter_by(movement_id=movement_id).all()
+
 
 
 

@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Repetitions</th>
+            <th scope="col">Weight</th>
+            <th scope="col">Date</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for action in actions %}
+        <tr>
+            <td>{{ action.repetition}}</td>
+            <td>{{ action.weight}}</td>
+            <td>{{ action.date}}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+        <form method="get" action="{{ url_for('movements', set_id=set_id)}}">
+            <button class="btn btn-primary btn-xs" type="submit">Go back to movements</button>
+        </form>
+    </table>
+{% endblock content %}

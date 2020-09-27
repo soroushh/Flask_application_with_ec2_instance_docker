@@ -183,6 +183,18 @@ def create_action(set_id, movement_id):
     return render_template('create_action.html', form=form)
 
 
+@app.route('/set/<int:set_id>/movement/<int:movement_id>/actions')
+def get_actions(set_id, movement_id):
+    actions = MovementAction.get_by_movement(movement_id=movement_id)
+
+    return render_template(
+        'action_history.html',
+        actions=actions,
+        set_id=set_id
+    )
+
+
+
 
 
 
