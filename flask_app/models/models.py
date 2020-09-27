@@ -136,8 +136,11 @@ class MovementAction(db.Model):
             cls(
                 movement_id=movement_id,
                 repetition=repetition,
-                weight=weight
-            ))
+                weight=weight,
+                date=date.today()
+            )
+        )
+        db.session.commit()
 
 
 
