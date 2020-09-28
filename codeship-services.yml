@@ -17,6 +17,7 @@ services:
     restart: always
     ports:
       - "80:80"
+    add_docker: true
 #    network_mode: host
 
 #  adddocker:
