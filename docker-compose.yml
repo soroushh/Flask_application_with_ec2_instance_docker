@@ -15,8 +15,8 @@ services:
     environment:
       - SERVER_NAME=54.170.128.248
     restart: always
-#    ports:
-#      - "80:80"
+    ports:
+      - "80:80"
 #    network_mode: host
 
 #  adddocker:
