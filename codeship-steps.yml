@@ -1,4 +1,0 @@
-- name: Running the container
-  tag: master
-  service: codeship_example
-  command: docker-compose up --build
