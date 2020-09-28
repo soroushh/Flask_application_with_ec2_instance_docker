@@ -19,9 +19,9 @@ services:
       - "80:80"
 #    network_mode: host
 
-  adddocker:
-    image: docker:stable-dind
-    add_docker: true
+#  adddocker:
+#    image: docker:stable-dind
+#    add_docker: true
 
 networks:
   default:
