@@ -1,0 +1,2 @@
+#- service: adddocker
+#  command: docker run -p 80:80 -d
