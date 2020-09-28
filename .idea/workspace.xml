@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41779062-a5b6-4128-ba3b-7b758430bf15" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/flask_app/models/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/models/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_app/templates/movements.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask_app/templates/movements.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +61,7 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/flask_app/models/models.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="417">
@@ -73,11 +73,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/flask_app/templates/movements.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="378">
-                  <caret line="29" column="66" selection-start-line="29" selection-start-column="66" selection-end-line="29" selection-end-column="66" />
+                <state relative-caret-position="479">
+                  <caret line="42" column="136" selection-start-line="42" selection-start-column="136" selection-end-line="42" selection-end-column="136" />
                 </state>
               </provider>
             </entry>
@@ -177,8 +177,8 @@
         <option value="$PROJECT_DIR$/flask_app/templates/create_action.html" />
         <option value="$PROJECT_DIR$/flask_app/routes/__init__.py" />
         <option value="$PROJECT_DIR$/flask_app/templates/action_history.html" />
-        <option value="$PROJECT_DIR$/flask_app/templates/movements.html" />
         <option value="$PROJECT_DIR$/flask_app/models/models.py" />
+        <option value="$PROJECT_DIR$/flask_app/templates/movements.html" />
       </list>
     </option>
   </component>
@@ -281,13 +281,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50675000" />
+    <option name="totallyTimeSpent" value="51334000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19027181" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08297568" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -301,7 +301,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.2503098" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.2503098" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -538,13 +538,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flask_app/templates/movements.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="29" column="66" selection-start-line="29" selection-start-column="66" selection-end-line="29" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/flask_app/routes/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="334">
@@ -562,6 +555,13 @@
           <folding>
             <element signature="e#0#47#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flask_app/templates/movements.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="42" column="136" selection-start-line="42" selection-start-column="136" selection-end-line="42" selection-end-column="136" />
         </state>
       </provider>
     </entry>

@@ -15,22 +15,35 @@
             {% for repetition in movement.repetitions %}
                 <td> {{repetition.number}}</td>
             {% endfor %}
-            <td>
-                <form method="get" action="{{ url_for('create_repetition', set_id=set_id, movement_id=movement.movement_id)}}">
-                    <button class="btn btn-primary btn-xs" type="submit">Add Rep</button>
-                </form>
-            </td>
-            <td>
-                <form method="get" action="{{ url_for('delete_movement', set_id=set_id, movement_id=movement.movement_id)}}">
-                    <button class="btn btn-primary btn-xs" type="submit">Delete move</button>
-                </form>
-                <form method="get" action="{{ url_for('create_action', movement_id=movement.movement_id, set_id=set_id)}}">
-                    <button class="btn btn-primary btn-xs" type="submit">Add Action</button>
-                </form>
-                <form method="get" action="{{ url_for('get_actions', movement_id=movement.movement_id, set_id=set_id)}}">
-                    <button class="btn btn-primary btn-xs" type="submit">See History</button>
-                </form>
-            </td>
+<!--            <td>-->
+<!--                <form method="get" action="{{ url_for('create_repetition', set_id=set_id, movement_id=movement.movement_id)}}">-->
+<!--                    <button class="btn btn-primary btn-xs" type="submit">Add Rep</button>-->
+<!--                </form>-->
+<!--            </td>-->
+<!--            <td>-->
+<!--                <form method="get" action="{{ url_for('delete_movement', set_id=set_id, movement_id=movement.movement_id)}}">-->
+<!--                    <button class="btn btn-primary btn-xs" type="submit">Delete move</button>-->
+<!--                </form>-->
+<!--                <form method="get" action="{{ url_for('create_action', movement_id=movement.movement_id, set_id=set_id)}}">-->
+<!--                    <button class="btn btn-primary btn-xs" type="submit">Add Action</button>-->
+<!--                </form>-->
+<!--                <form method="get" action="{{ url_for('get_actions', movement_id=movement.movement_id, set_id=set_id)}}">-->
+<!--                    <button class="btn btn-primary btn-xs" type="submit">See History</button>-->
+<!--                </form>-->
+<!--            </td>-->
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Actions
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="{{ url_for('delete_movement', set_id=set_id, movement_id=movement.movement_id)}}">Delete Movement</a>
+                            <a class="dropdown-item" href="{{ url_for('create_action', movement_id=movement.movement_id, set_id=set_id)}}">Add Action</a>
+                            <a class="dropdown-item" href="{{ url_for('create_repetition', set_id=set_id, movement_id=movement.movement_id)}}">Add repetition</a>
+                            <a class="dropdown-item" href="{{ url_for('get_actions', movement_id=movement.movement_id, set_id=set_id)}}">See history</a>
+                        </div>
+                    </div>
+                </td>
         </tr>
         {% endfor %}
         </tbody>
@@ -42,4 +55,15 @@
 
 </div>
 {% endblock content %}
+
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown button
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
 
