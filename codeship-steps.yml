@@ -1,2 +1,2 @@
-#- service: adddocker
-#  command: docker run -p 80:80 -d
+- service: nginx
+  command: docker exec -it nginx nginx -g "daemon off;"
