@@ -19,9 +19,11 @@ services:
       - "80:80"
 #    network_mode: host
 
-#  adddocker:
-#    image: docker:stable-dind
-#    add_docker: true
+  fab:
+    build:
+      context: .
+      dockerfile: Dockerfile_fab
+    container_name: fabric
 
 networks:
   default:

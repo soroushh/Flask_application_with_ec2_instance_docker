@@ -1,0 +1,26 @@
+FROM ubuntu:18.04
+
+MAINTAINER sorush.kh68@gmail.com
+
+ENV DEBIAN_FRONTEND noninteractive
+RUN apt-get update -y
+RUN apt-get install python3-pip -y
+RUN apt-get install gunicorn3 -y
+RUN apt-get install python-psycopg2 -y
+RUN apt-get install -y python-alembic
+RUN pip3 install boto
+RUN pip3 install fabric3
+#RUN pip3 install urllib2
+
+
+ENV AWS_EC2_REGION=us-west-1
+ENV AWS_ACCESS_KEY_ID=AKIA5ZEPWVDX5DOG7IOR
+ENV AWS_SECRET_ACCESS_KEY=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
+
+RUN mkdir /app
+COPY . /app/
+RUN chmod 400 app/flask.pem
+
+WORKDIR /app
+
+CMD tail -f /dev/null
