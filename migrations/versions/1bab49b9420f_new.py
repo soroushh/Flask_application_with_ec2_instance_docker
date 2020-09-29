@@ -24,4 +24,4 @@ def upgrade():
 
 
 def downgrade():
-    op.drop_table('ac')
+    op.drop_table('abc')
