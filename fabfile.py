@@ -69,6 +69,11 @@ def update_branch():
 	with cd("~/Flask_application_with_ec2_instance_docker"):
 		run('git pull origin master')
 
+
+def upgrade_migrations():
+	with cd("~/Flask_application_with_ec2_instance_docker"):
+		run('sudo docker exec -it flaskapp alembic upgrade heads')
+
 # Your custom Fabric task here after and run them using,
 # fab set_hosts:phpapp,2X,us-west-1 task1 task2 task3
 
