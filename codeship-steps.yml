@@ -1,2 +1,3 @@
-- service: nginx
-  command: docker exec -it nginx nginx -g "daemon off;"
+- name: Restarting nginx
+  service: fab
+  command: fab set_hosts start_apache
