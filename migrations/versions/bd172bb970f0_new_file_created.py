@@ -1,7 +1,7 @@
 """New file created
 
 Revision ID: bd172bb970f0
-Revises: a31a51b5f72a
+Revises: a31a51b5f72a( this is a revision file)
 Create Date: 2020-10-04 17:20:24.266441
 
 """
