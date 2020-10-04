@@ -5,6 +5,8 @@ services:
     build: .
     container_name:
       flaskapp
+    volumes:
+      - ./migrations/versions:/app/migrations/versions
 #    ports:
 ##      - "8000:8000"
 #    network_mode: bridge
